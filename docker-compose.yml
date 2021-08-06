@@ -1,0 +1,17 @@
+---
+version: '3.7'
+services:
+  frontend:
+    image: asterle/frontend-docker:latest
+    privileged: true
+    user: root
+    ports:
+      - 4200:4200
+    container_name: frontend
+  backend:
+    image: asterle/backend-docker:latest
+    privileged: true
+    user: root
+    ports:
+      - 8080:8080
+    container_name: backend
